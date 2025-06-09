@@ -1,0 +1,322 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GhettoGang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+
+    <!--style sheet-->
+
+    <style>
+
+
+body {
+    margin: 0;
+    font-family: "Jolly Lodger", system-ui;
+    background-color: papayawhip;
+    color: #3E2723;
+    scroll-behavior: smooth;
+    font-size: 24px;
+}
+
+
+.ghenav {
+    background-color: rgb(20, 219, 20);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-size: 50% 100%;
+}
+
+.ghenav h1 {
+    margin:0;
+    font-size: 1.5rem;
+    color: black
+  
+
+}
+.ghenav img {
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.nav-links li a {
+    color: black
+    
+
+}
+
+.nav-links li a:hover {
+    color: #a1887f;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+.select {
+    position: relative;
+    text-align: center;
+    color: rgb(7, 7, 7);
+
+}
+
+.select h2 {
+    background-color: rgb(48, 224, 89);
+}
+
+.select img {
+    width: 10px;
+    align-self: center;
+}
+
+.select-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+
+}
+#inicio{
+    display: flex;
+    flex-direction: column;
+}
+#inicio img {
+    width: 500px;
+    border-radius: 5.7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#nosotros h2 {
+    background-color: rgb(111, 255, 71);
+
+}
+
+.menu-categorias {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    
+}
+.menu-categorias img {
+    width: 100%;
+    border-radius: 5.5%;
+
+}
+.categoria {
+    background-color: rgb(79, 231, 79);
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    transition: transform 0.3s;
+}
+.categoria:hover {
+    transform: scale(1.05);
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+input, textarea, button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid palevioletred;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(175, 242, 42);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+button:hover {
+    background-color: paleturquoise;
+
+}
+
+footer {
+    background-color: #48e110;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+/*Media Queries*/
+@media (max-width: 1200px) {
+    .menu-categorias {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #5D4037;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .menu-btn {
+        display: block;
+    }
+}
+
+@media (max-width:375px) {
+    .select-text p {
+        font-size: 1.2rem;
+    }
+    .select-text p {
+        font-size: 0.9rem;
+    }
+    .select.img {
+        display: block;
+    }
+    
+}
+@media (max-width: 1024px) {
+    #inicio img {
+        width: 50vw;
+
+        
+}
+}
+    </style>
+
+
+    
+<body>
+    <!--header to navigate-->
+    <header class="ghenav" >
+        <h1>Ghetto Food & Drinks</h1>
+        <button class="menu-btn" onclick="BtnMenu()" >=</button>
+        <ul class="nav-links" id="navLinks" >
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#Menu">Menu</a></li>
+            <li><a href="#Nosotros">Nosotros</a></li>
+            <li><a href="#Ubicacion">Ubicacion</a></li>
+            <li><a href="#Reservas">Reservas</a></li>
+        </ul>
+    </header>
+    <!--Main section-->
+    <section class="select" id="inicio" >
+        <img src="/Assets/IMG_5984.webp" alt="arte y comida" class="img">
+        <div class="slect-text" >
+            <h2>Bienvenidos a Ghetto Food </h2>
+            <p>Fast Food con la mejor calidad de productos del mercado con el toque unico de barrio en medellin</p>
+        </div>
+
+    </section>
+
+    <!--Products Menu-->
+    <main>
+        <section id="Menu" >
+            <h2>Menu</h2>
+            <div class=" Menu-categorias" >
+                <div class="categoria" >
+                    <h3>Hamburguesas</h3>
+                    <p>carne 100% de res Angus Beef, pan brioche,vegetales frescos...</p>
+                    <p>22.000$</p>
+                    <img src="/Assets/etsaES.png" alt="hamburguer">
+                    <button>COMPRAR</button>
+                    
+                </div>
+                <div class="categoria" >
+                    <h3>HotDogs</h3>
+                    <p>Salchicha tipo americana,pan artesanal,salsas de la casa especiales</p>
+                    <p>15.000$</p>
+                    <img src="/Assets/images(1).png" alt="hotdog">
+                    <button>COMPRAR</button>
+                </div>
+                <div class="categoria" > 
+                    <h3>Bebidas</h3>
+                    <p>Frappe,Te helado,Jugos Naturales</p>
+                    <p>10.000$</p>
+                    <img src="https://coffeeholicsespressobar.com/cdn/shop/collections/Variedad-de-t-s-fr-os.png?v=1591406595" alt="">
+                    <button>COMPRAR</button>
+                </div>
+            </div>
+
+        </section>
+        <!--More info about us-->
+        <section id="nosotros" >
+            <h2>Sobre Nosotros</h2>
+            <p>Somos un moviento barrial de comida rapida artesanal que realiza eventos por toda la ciudad de medellin llevando a cada rincon de las comunas, un sabor diferente en cada bocado que llena de alegria tu corazon </p>
+        </section>
+
+        <!--Location and Hours-->
+        <section id="ubicacion" >
+            <h2>Ubicacion y Horarios</h2>
+            <p>Direccion: Calle 101, ghetto paradise</p>
+            <p>Horario: jueves a domingo - 4:00pm a 12:00am</p>
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63461.62229193905!2d-75.58823161137694!3d6.217306505396237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46828be7a83807%3A0x73d813d34659dfd4!2sMuseo%20El%20Castillo!5e0!3m2!1ses!2sco!4v1749124432971!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+ 
+        </section>
+
+        <!--Reservations-->
+        <section id="reservas" >
+            <h2>Reservas</h2>
+            <form onsubmit="return validarFormulario">
+                <input type="text" id="nombre" placeholder="Tu nombre" required />
+                <input type="email" id="email" placeholder="Tu correo" required />
+                <textarea id="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+                <button type="submit" >Reservar</button>
+            </form>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy;Ghetto Food & Drinks. Todos los derechos reservados</p>
+    </footer>
+
+  
+    
+</body>
+</html>

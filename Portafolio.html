@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Portafolio Personal</title>
+
+    <!--style sheet-->
+
+    <style>
+        
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-ligth-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+
+
+    }
+
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+        }
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #FFD700;
+}
+
+
+.main {
+    padding: 20px;
+    background-color: #ce0ad8;
+}
+
+.about, .projects, .contact {
+    margin: 20px 0;
+    text-align: center;
+}
+
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #5f51a9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects img {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 50%;
+    
+
+
+}
+
+
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+
+.footer {
+    background: #8078e3;
+    color: #000;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    
+
+    <main class="main">
+        <section id="about" class="about">
+            <h1>Hi, I'm David, and in this portfolio I'll show you more of my projects.</h1>
+            <p>Web developer passionate about creating innovative solutions.</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Project 1 GhettoMed</h3>
+                    <p>It's a clothing store that I started with a group of friends who live near my house where we are inspired by the ghetto style of the street, leaving each person who dresses with our brand a different vision of street art.</p>
+                    <img src="/Assets/logo_gift-02_c239e2a3-6520-474c-beaf-0f4f9916bd91.jpg" alt="">
+                    <a href="https://ghettomed.com/?srsltid=AfmBOor1HGQr4EMYNJiDqBazYt7Uq783q7DdylcxVdbmBvJPfNhyECC4" class="btn">Ver más</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2 Ghetto food&drinks</h3>
+                    <p>Continuing with the same venture with my friends from the neighborhood, we also wanted to open a fast food business where we offer delicious hamburgers and hot dogs with the best quality products on the market where with every bite you want to continue eating our fast food.</p>
+                    <img src="/Assets/IMG_5984.webp" alt="">
+                    <a href="proyectoGhettofood.html" class="btn">Ver más</a>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 David Rendon. all rights reserved</p>
+    </footer>
+</body>
+</html>
